@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Playermove : MonoBehaviour
 {
+    //este codigo funciona pero le falta orden y mejor estructuracion pero anda bien y eso es lo que importa.
     public CharacterController controller;
     public float speed = 10f;
     public float gravity = -9.8f;
