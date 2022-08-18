@@ -30,5 +30,9 @@ public class SensorTrampa : MonoBehaviour
         {
             colisioneConAlgo = true;
         }
+        else
+        {
+            colisioneConAlgo = false;
+        }
     }
 }
