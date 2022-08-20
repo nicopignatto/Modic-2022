@@ -43,4 +43,12 @@ public class Playermove : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag =="Trampa")
+        {
+            Debug.Log("Me muero");
+        }
+    }
 }
