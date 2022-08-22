@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Playermove : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     //este codigo funciona pero le falta orden y mejor estructuracion pero anda bien y eso es lo que importa.
     public CharacterController controller;
@@ -14,10 +14,25 @@ public class Playermove : MonoBehaviour
     public LayerMask groundmask;
     Vector3 velocity;
     bool isgrounded;
+   
+   static private bool muerto;
+
+   static public bool Muerto
+    {
+        get
+        {
+            return muerto;
+        }
+
+        set
+        {
+            muerto = value;
+        }
+    }
 
     void Start()
     {
-      
+        muerto = false;
     }
 
   
@@ -49,6 +64,9 @@ public class Playermove : MonoBehaviour
         if (collision.gameObject.tag =="Trampa")
         {
             Debug.Log("Me muero");
+            muerto = true;
+            this.gameObject.SetActive(false);
         }
     }
+    
 }
