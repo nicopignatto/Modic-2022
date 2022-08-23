@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Playermove : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
+    //este codigo funciona pero le falta orden y mejor estructuracion pero anda bien y eso es lo que importa.
     public CharacterController controller;
     public float speed = 10f;
     public float gravity = -9.8f;
@@ -13,10 +14,25 @@ public class Playermove : MonoBehaviour
     public LayerMask groundmask;
     Vector3 velocity;
     bool isgrounded;
+   
+   static private bool muerto;
+
+   static public bool Muerto
+    {
+        get
+        {
+            return muerto;
+        }
+
+        set
+        {
+            muerto = value;
+        }
+    }
 
     void Start()
     {
-      
+        muerto = false;
     }
 
   
@@ -42,4 +58,15 @@ public class Playermove : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag =="Trampa")
+        {
+            Debug.Log("Me muero");
+            muerto = true;
+            this.gameObject.SetActive(false);
+        }
+    }
+    
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camaralook : MonoBehaviour
+public class CamaraLook : MonoBehaviour
 {
     public float mousesensivility = 1500f;
     public Transform playerbody;
