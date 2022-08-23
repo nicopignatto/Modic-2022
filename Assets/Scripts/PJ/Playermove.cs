@@ -6,18 +6,18 @@ public class PlayerMove : MonoBehaviour
 {
     //este codigo funciona pero le falta orden y mejor estructuracion pero anda bien y eso es lo que importa.
     public CharacterController controller;
+    public Transform groundcheck;
+    public LayerMask groundmask;
     public float speed = 10f;
     public float gravity = -9.8f;
     public float jumpheight = 2f;
-    public Transform groundcheck;
     public float grounddistance = 0.3f;
-    public LayerMask groundmask;
-    Vector3 velocity;
     bool isgrounded;
+    Vector3 velocity;
    
    static private bool muerto;
 
-   static public bool Muerto
+    static public bool Muerto
     {
         get
         {
@@ -68,5 +68,4 @@ public class PlayerMove : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
-    
 }
