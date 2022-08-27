@@ -61,9 +61,9 @@ public class PlayerMove : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag =="Trampa")
+        if (collision.gameObject.tag == "Trampa" || collision.gameObject.tag == "Fuego")
         {
-            Debug.Log("Me muero");
+            //Debug.Log("Me muero");
             muerto = true;
             this.gameObject.SetActive(false);
         }
