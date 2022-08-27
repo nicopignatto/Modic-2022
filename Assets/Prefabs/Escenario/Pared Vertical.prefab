@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4335200691710840445, guid: 5705411ba9fce774c94e3a036a4a6cd0, type: 3}
       propertyPath: m_Name
-      value: Pared Horizontal
+      value: Pared Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335200691710840445, guid: 5705411ba9fce774c94e3a036a4a6cd0, type: 3}
+      propertyPath: m_TagString
+      value: Pared
       objectReference: {fileID: 0}
     - target: {fileID: 7699693803923352016, guid: 5705411ba9fce774c94e3a036a4a6cd0, type: 3}
       propertyPath: m_RootOrder

@@ -15,6 +15,15 @@ public class ProyectilTrampa : MonoBehaviour
         MovimientoProyectilTrampa();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Pared" || collision.gameObject.tag == "Jugador")
+        {
+            //Debug.Log("Se destruyo la bala");
+            Destroy(this.gameObject);
+        }
+    }
+
     private void MovimientoProyectilTrampa()
     {
         rbProyectilTrampa.velocity = Vector3.forward * velMovTrampaProyectil;

@@ -25,13 +25,17 @@ public class SpawnTrampaProyectil : MonoBehaviour
 
     private void SpawnearProyectilTrampa()
     {
-        if (tiempoActualTrampaProyectil > coldownTrampaProyectil)
+        if (SensorTrampa.ColisioneConAlgo && PlayerMove.Muerto == false)
         {
-            Debug.Log("Disparo proyectil trampa");
-            Instantiate(proyectilTrampaPrefab, this.transform.position, proyectilTrampaPrefab.transform.rotation);
-            tiempoActualTrampaProyectil = 0f;
-        }
 
-        tiempoActualTrampaProyectil += Time.deltaTime;
+            if (tiempoActualTrampaProyectil > coldownTrampaProyectil)
+            {
+                //Debug.Log("Disparo proyectil trampa");
+                Instantiate(proyectilTrampaPrefab, this.transform.position, proyectilTrampaPrefab.transform.rotation);
+                tiempoActualTrampaProyectil = 0f;
+            }
+
+            tiempoActualTrampaProyectil += Time.deltaTime;
+        }
     }
 }

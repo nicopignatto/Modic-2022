@@ -24,7 +24,7 @@ public class TrampaMovil : MonoBehaviour
 
     private void MovimientoTrampaMovil()
     {
-        if (SensorTrampa.ColisioneConAlgo == true)
+        if (SensorTrampa.ColisioneConAlgo == true && PlayerMove.Muerto == false)
         {
             if (transform.position.z > limiteDer)
             {
