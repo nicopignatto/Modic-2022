@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6258116531360503435
+--- !u!1 &6436913374324252501
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6258116531360503434}
-  - component: {fileID: 6258116531360503438}
-  - component: {fileID: 6258116531360503439}
-  - component: {fileID: 6258116531360503436}
-  - component: {fileID: 6258116531360503437}
+  - component: {fileID: 6436913374324252520}
+  - component: {fileID: 6436913374324252521}
+  - component: {fileID: 6436913374324252522}
+  - component: {fileID: 6436913374324252523}
+  - component: {fileID: 6436913374324252500}
   m_Layer: 0
-  m_Name: Spawn Trampa con Proyectil
+  m_Name: Trampa Proyectil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6258116531360503434
+--- !u!4 &6436913374324252520
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6258116531360503435}
+  m_GameObject: {fileID: 6436913374324252501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.16, y: -4.863, z: -6.452}
-  m_LocalScale: {x: 0.6463164, y: 0.6413, z: 0.6131839}
+  m_LocalPosition: {x: -2.6144962, y: 1.18, z: -1.83}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6258116532118974938}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6258116531360503438
+--- !u!33 &6436913374324252521
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6258116531360503435}
+  m_GameObject: {fileID: 6436913374324252501}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6258116531360503439
+--- !u!23 &6436913374324252522
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6258116531360503435}
+  m_GameObject: {fileID: 6436913374324252501}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,62 +85,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6258116531360503436
+--- !u!65 &6436913374324252523
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6258116531360503435}
+  m_GameObject: {fileID: 6436913374324252501}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6258116531360503437
+--- !u!114 &6436913374324252500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6258116531360503435}
+  m_GameObject: {fileID: 6436913374324252501}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0b628ee958381543b339c9237f7dcfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coldownTrampaProyectil: 5
+  coldownTrampaProyectil: 3.5
   proyectilTrampaPrefab: {fileID: 4735794845269896968, guid: 16fe8c753a52cde4aa4615795910272c, type: 3}
---- !u!1 &6258116532118974939
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6258116532118974938}
-  m_Layer: 0
-  m_Name: Trampa con Proyectil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6258116532118974938
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6258116532118974939}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2642512, y: 5.777119, z: -3.7251534}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6258116531360503434}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
