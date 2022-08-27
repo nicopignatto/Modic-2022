@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class Playermove : MonoBehaviour
 {
     //este codigo funciona pero le falta orden y mejor estructuracion pero anda bien y eso es lo que importa.
     public CharacterController controller;

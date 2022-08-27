@@ -25,7 +25,7 @@ public class SpawnTrampaProyectil : MonoBehaviour
 
     private void SpawnearProyectilTrampa()
     {
-        if (SensorTrampa.ColisioneConAlgo && PlayerMove.Muerto == false)
+        if (SensorTrampa.ColisioneConAlgo && Playermove.Muerto == false)
         {
 
             if (tiempoActualTrampaProyectil > coldownTrampaProyectil)

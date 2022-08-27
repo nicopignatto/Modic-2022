@@ -19,7 +19,7 @@ public class ControladorMuertePJ : MonoBehaviour
     
     void Update()
     {
-        if (PlayerMove.Muerto)
+        if (Playermove.Muerto)
         {
             pj.SetActive(false);
             camara2.SetActive(true);
@@ -29,7 +29,7 @@ public class ControladorMuertePJ : MonoBehaviour
 
     private void MoverCamara2()
     {
-        if (PlayerMove.Muerto)
+        if (Playermove.Muerto)
         {
             camara2.transform.position = pj.transform.position + posCamara2Act;
             camara2.transform.rotation = rotacionCamara2Act;
