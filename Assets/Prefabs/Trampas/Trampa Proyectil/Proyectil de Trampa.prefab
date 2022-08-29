@@ -127,5 +127,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d99dfabd85771344793e548989db0ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velMovTrampaProyectil: 10
+  velMovTrampaProyectil: 20
   rbProyectilTrampa: {fileID: 4735794845269896973}
