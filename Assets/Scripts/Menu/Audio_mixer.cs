@@ -19,6 +19,6 @@ public class Audio_mixer : MonoBehaviour
     }
     void Music(float valor)
     {
-        audiomixer.SetFloat(Mixer_Music, valor);
+        audiomixer.SetFloat(Mixer_Music, Mathf.Log10(valor) * 20);
     }
 }

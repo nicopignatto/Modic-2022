@@ -22,35 +22,39 @@ public class PauseMenu : MonoBehaviour
             {
                 Pause();
             }
-            if (GameIsPause && OptionsMenuUI == true)
-            {
-                Pause();
-                OptionsMenuUI.SetActive(false);
-                Time.timeScale = 0f;
-            }
-        }
+        }   
+        
     }
     public void Resume()
     {
         PauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
         GameIsPause = false;
+        Time.timeScale = 1f;
     }
     public void Pause()
     {
         PauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
         GameIsPause = true;
+        Time.timeScale = 0f;
     }
     public void Options()
     {
         PauseMenuUI.SetActive(false);
         OptionsMenuUI.SetActive(true);
+        GameIsPause = true;
         Time.timeScale = 0f;
     }
     public void ToMainMenu()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
-    }   
+        GameIsPause = false;
+        Time.timeScale = 1f;
+    }
+    public void BackButton()
+    {
+        PauseMenuUI.SetActive(true);
+        OptionsMenuUI.SetActive(false);
+        GameIsPause = true; 
+        Time.timeScale = 0f;
+    }
 }
