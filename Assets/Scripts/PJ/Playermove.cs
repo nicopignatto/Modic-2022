@@ -8,7 +8,7 @@ public class Playermove : MonoBehaviour
     public CharacterController controller;
     public Transform groundcheck;
     public LayerMask groundmask;
-    public float speed = 10f;
+    public float speed = 10f;//10f
     public float gravity = -9.8f;
     public float jumpheight = 2f;
     public float grounddistance = 0.3f;
@@ -32,7 +32,9 @@ public class Playermove : MonoBehaviour
 
     void Start()
     {
+        
         muerto = false;
+
     }
 
   
@@ -57,6 +59,7 @@ public class Playermove : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+        
     }
 
     private void OnCollisionEnter(Collision collision)
