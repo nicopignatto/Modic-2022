@@ -64,9 +64,19 @@ public class Playermove : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Trampa" || collision.gameObject.tag == "Fuego")
+        if (collision.gameObject.tag == "Trampa")
         {
             //Debug.Log("Me muero");
+            muerto = true;
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Fuego")
+        {
+            //Debug.Log("Me muero por el fuego");
             muerto = true;
             this.gameObject.SetActive(false);
         }

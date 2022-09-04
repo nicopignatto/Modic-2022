@@ -13,6 +13,7 @@ public class ControladorMuertePJ : MonoBehaviour
     [Header("Linkeos")]
     [SerializeField] private GameObject pj;
     [SerializeField] private GameObject camara2;
+    [SerializeField] private GameObject techoEscena;//representa el techo del laberinto.
     
     
 
@@ -21,6 +22,7 @@ public class ControladorMuertePJ : MonoBehaviour
     {
         if (Playermove.Muerto)
         {
+            techoEscena.SetActive(false);
             pj.SetActive(false);
             camara2.SetActive(true);
         }
