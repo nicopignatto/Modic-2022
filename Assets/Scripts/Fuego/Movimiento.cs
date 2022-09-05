@@ -19,6 +19,11 @@ public class Movimiento : MonoBehaviour
             EnemyRb.AddForce(MirarAlPlayer * speed);
 
         }
+        else
+        {
+            //Debug.Log("Se desactivo el fuego");
+            this.gameObject.SetActive(false);
+        }
         
     }
 }
