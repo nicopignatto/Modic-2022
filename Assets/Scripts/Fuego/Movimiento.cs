@@ -13,11 +13,12 @@ public class Movimiento : MonoBehaviour
     }
     void Update()
     {
-        if (Player.activeInHierarchy)
+        if (Player.activeInHierarchy && Playermove.Muerto == false)
         {
             Vector3 MirarAlPlayer = (Player.transform.position - transform.position).normalized;
             EnemyRb.AddForce(MirarAlPlayer * speed);
 
         }
+        
     }
 }
