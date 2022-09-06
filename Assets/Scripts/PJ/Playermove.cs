@@ -38,7 +38,7 @@ public class Playermove : MonoBehaviour
     }
 
   
-    void Update()
+    void FixedUpdate()
     {
         isgrounded = Physics.CheckSphere(groundcheck.position, grounddistance, groundmask);
         
