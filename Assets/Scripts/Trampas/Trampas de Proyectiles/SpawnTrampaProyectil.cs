@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SpawnTrampaProyectil : MonoBehaviour
 {
     [Header("Tiempo entre disparo de proyectil de la trampa")]
@@ -38,4 +39,5 @@ public class SpawnTrampaProyectil : MonoBehaviour
             tiempoActualTrampaProyectil += Time.deltaTime;
         }
     }
+ 
 }

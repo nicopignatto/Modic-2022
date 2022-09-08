@@ -4880,6 +4880,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 116231825}
     m_Modifications:
+    - target: {fileID: 6436913374324252500, guid: 7defd2e9ee2064349a50e840cd50d9b9, type: 3}
+      propertyPath: flechaPrefab
+      value: 
+      objectReference: {fileID: 4735794845269896968, guid: 16fe8c753a52cde4aa4615795910272c, type: 3}
+    - target: {fileID: 6436913374324252500, guid: 7defd2e9ee2064349a50e840cd50d9b9, type: 3}
+      propertyPath: cantInstancias
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6436913374324252500, guid: 7defd2e9ee2064349a50e840cd50d9b9, type: 3}
+      propertyPath: proyectilPrefab
+      value: 
+      objectReference: {fileID: 4735794845269896968, guid: 16fe8c753a52cde4aa4615795910272c, type: 3}
     - target: {fileID: 6436913374324252501, guid: 7defd2e9ee2064349a50e840cd50d9b9, type: 3}
       propertyPath: m_Name
       value: Trampa Proyectil

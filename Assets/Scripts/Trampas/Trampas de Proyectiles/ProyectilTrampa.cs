@@ -21,6 +21,7 @@ public class ProyectilTrampa : MonoBehaviour
         {
             //Debug.Log("Se destruyo la bala");
             Destroy(this.gameObject);
+            //this.gameObject.SetActive(false);
         }
     }
 
