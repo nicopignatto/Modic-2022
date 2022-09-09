@@ -84,7 +84,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void VolveraIntentar()
+    public void VolverAIntentar()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
