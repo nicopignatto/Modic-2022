@@ -6,12 +6,11 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject panelMuerte;
+
     public static bool GameIsPause = false;
     public GameObject PauseMenuUI;
     public GameObject OptionsMenuUI;
-    [SerializeField] private GameObject panelMuerte;
-    
-
 
     private void Start()
     {
@@ -22,14 +21,8 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             GameIsPause = !GameIsPause;
-            if (GameIsPause)
-            {
-                Pause();
-            }
-            else
-            {
-                Resume();
-            }
+            if (GameIsPause) Pause();
+            else Resume();
         }
 
         ActivarMenuMuertePJ();
@@ -45,6 +38,7 @@ public class PauseMenu : MonoBehaviour
     {
         PauseMenuUI.SetActive(true);
         GameIsPause = true;
+
         Time.timeScale = 0f;
     }
     public void Options()
@@ -52,12 +46,14 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(false);
         OptionsMenuUI.SetActive(true);
         GameIsPause = true;
+
         Time.timeScale = 0f;
     }
     public void ToMainMenu()
     {
         SceneManager.LoadScene(0);
         GameIsPause = false;
+
         Time.timeScale = 1f;
     }
     public void BackButton()
@@ -65,6 +61,7 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true);
         OptionsMenuUI.SetActive(false);
         GameIsPause = true; 
+
         Time.timeScale = 0f;
     }
 

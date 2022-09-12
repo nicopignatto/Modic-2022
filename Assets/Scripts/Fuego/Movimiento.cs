@@ -5,6 +5,7 @@ public class Movimiento : MonoBehaviour
 {
     private Rigidbody EnemyRb;
     private GameObject Player;
+
     public float speed = 2;
     void Start()
     {
