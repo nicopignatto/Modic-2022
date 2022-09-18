@@ -111,4 +111,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coldownTrampaProyectil: 5
-  proyectilTrampaPrefab: {fileID: 4735794845269896968, guid: 16fe8c753a52cde4aa4615795910272c, type: 3}
+  proyectilTrampaPrefab: {fileID: 4772936259913364540, guid: d0adf53755a00a94b99b03acef28f762, type: 3}
