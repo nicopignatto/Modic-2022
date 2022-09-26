@@ -8,10 +8,12 @@ public class Playermove : MonoBehaviour
     public CharacterController controller;
     public Transform groundcheck;
     public LayerMask groundmask;
+
     public float speed = 10f;//10f
     public float gravity = -9.8f;
     public float jumpheight = 2f;
     public float grounddistance = 0.3f;
+
     bool isgrounded;
     Vector3 velocity;
    
@@ -49,6 +51,7 @@ public class Playermove : MonoBehaviour
         
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move(move * speed * Time.deltaTime);
 
