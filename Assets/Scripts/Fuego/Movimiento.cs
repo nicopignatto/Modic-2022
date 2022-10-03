@@ -12,7 +12,7 @@ public class Movimiento : MonoBehaviour
         EnemyRb = GetComponent<Rigidbody>();
         Player = GameObject.Find("Player 1");
     }
-    void Update()
+    void FixedUpdate()
     {
         if (Player.activeInHierarchy && Playermove.Muerto == false)
         {
