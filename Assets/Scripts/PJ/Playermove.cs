@@ -8,6 +8,7 @@ public class Playermove : MonoBehaviour
     public CharacterController controller;
     public Transform groundcheck;
     public LayerMask groundmask;
+    private AudioSource audioSource;
 
     public float speed = 10f;//10f
     public float gravity = -9.8f;
@@ -18,28 +19,19 @@ public class Playermove : MonoBehaviour
     Vector3 velocity;
    
    static private bool muerto;
-
+   
     static public bool Muerto
     {
-        get
-        {
-            return muerto;
-        }
-
-        set
-        {
-            muerto = value;
-        }
+        get{return muerto;}
+        set{muerto = value;}
     }
 
     void Start()
     {
-        
         muerto = false;
-
+        audioSource = FindObjectOfType<AudioSource>();
     }
 
-  
     void FixedUpdate()
     {
         isgrounded = Physics.CheckSphere(groundcheck.position, grounddistance, groundmask);
@@ -48,21 +40,16 @@ public class Playermove : MonoBehaviour
         {
             velocity.y = -2f;
         }
-        
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(move * speed * Time.deltaTime);
-
-        if(Input.GetButtonDown("Jump")&& isgrounded)
+        Moverse();
+               
+        if (Input.GetButtonDown("Jump")&& isgrounded)
         {
             velocity.y = Mathf.Sqrt(jumpheight * -2 * gravity);
         }
 
         velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
-        
+        controller.Move(velocity * Time.deltaTime);               
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -84,4 +71,12 @@ public class Playermove : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
+     void Moverse()
+     {
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        Vector3 move = transform.right * x + transform.forward * z;
+        controller.Move(move * speed * Time.deltaTime);
+     }
 }

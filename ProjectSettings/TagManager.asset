@@ -8,6 +8,7 @@ TagManager:
   - Trampa
   - Fuego
   - Pared
+  - Escenario
   layers:
   - Default
   - TransparentFX

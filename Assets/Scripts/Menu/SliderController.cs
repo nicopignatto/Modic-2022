@@ -13,6 +13,7 @@ public class SliderController : MonoBehaviour
 
     public float SliderValueM;
     public float SliderValueB;
+
    
     public Toggle toggle;
     private void Awake()
@@ -26,8 +27,8 @@ public class SliderController : MonoBehaviour
         AudioListener.volume = SliderMusic.value;
         ImageBrillo.color = new Color(ImageBrillo.color.r, ImageBrillo.color.g, ImageBrillo.color.b, SliderValueB);
 
-        if (Screen.fullScreen) toggle.isOn = true;        
-        else toggle.isOn = false;
+        if (toggle.isOn) Screen.fullScreen = true;
+        else Screen.fullScreen = false;
     }
     private void FixedUpdate()
     {

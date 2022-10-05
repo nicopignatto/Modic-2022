@@ -6,8 +6,8 @@ using System;
 public class ControladorDeVictoria : MonoBehaviour
 {
     [SerializeField] GameObject panelVictoria;
-    public bool isactivated = false;
 
+    public bool isactivated = false;
 
     private void OnTriggerEnter(Collider other)
     {
