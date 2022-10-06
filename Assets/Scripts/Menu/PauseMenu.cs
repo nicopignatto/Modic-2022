@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject panelMuerte;
+    [SerializeField] GameObject panelMuerte;
 
     public static bool GameIsPause = false;
     public GameObject PauseMenuUI;
