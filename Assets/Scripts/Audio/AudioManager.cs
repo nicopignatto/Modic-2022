@@ -5,16 +5,22 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioClip[] audioClips;
+    public AudioClip[] audioClips;
     private AudioSource audioSource;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
     }
-
-    public void SeleccionDeAudio(int indice, float volumen)
+    /// <summary>
+    /// indice es la pista de audio a utilizar, volumen es el volumen, loopear es true o false
+    /// </summary>
+    /// <param name="indice"></param>
+    /// <param name="volumen"></param>
+    /// <param name="loopear"></param>
+    public void SeleccionDeAudio(int indice, float volumen, bool loopear)
     {
         audioSource.PlayOneShot(audioClips[indice], volumen);
+        audioSource.loop = loopear;
     }
 }

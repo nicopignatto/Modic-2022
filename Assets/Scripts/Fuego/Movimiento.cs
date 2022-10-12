@@ -5,12 +5,15 @@ public class Movimiento : MonoBehaviour
 {
     private Rigidbody EnemyRb;
     private GameObject Player;
+    private AudioManager audioManager;
 
     public float speed = 2;
     void Start()
     {
         EnemyRb = GetComponent<Rigidbody>();
         Player = GameObject.Find("Player 1");
+        audioManager = FindObjectOfType<AudioManager>();
+        EjecutarSonido();
     }
     void FixedUpdate()
     {
@@ -24,6 +27,21 @@ public class Movimiento : MonoBehaviour
         {
             //Debug.Log("Se desactivo el fuego");
             this.gameObject.SetActive(false);
+        }
+
+    }
+
+
+    void EjecutarSonido()
+    {
+        if (audioManager)
+        {
+            if (audioManager.audioClips.Length > 0)
+            {
+                audioManager.SeleccionDeAudio(1, 0.5f, true);
+                Debug.Log("Ejecuto Sonido");
+            }
+
         }
         
     }
