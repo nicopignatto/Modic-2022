@@ -39,7 +39,7 @@ public class Movimiento : MonoBehaviour
             if (audioManager.audioClips.Length > 0)
             {
                 audioManager.SeleccionDeAudio(1, 0.5f, true);
-                Debug.Log("Ejecuto Sonido");
+                //Debug.Log("Ejecuto Sonido");
             }
 
         }
