@@ -8,6 +8,7 @@ public class Playermove : MonoBehaviour
     public CharacterController controller;
     public Transform groundcheck;
     public LayerMask groundmask;
+    public AudioManager audioManager;
 
     public float speed = 10f;//10f
     public float gravity = -9.8f;
@@ -28,6 +29,8 @@ public class Playermove : MonoBehaviour
     void Start()
     {
         muerto = false;
+        audioManager = FindObjectOfType<AudioManager>();
+        EjecutarSonido();
     }
 
     void FixedUpdate()
@@ -77,5 +80,19 @@ public class Playermove : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move(move * speed * Time.deltaTime);
+        
      }
+    void EjecutarSonido()
+    {
+        if (audioManager)
+        {
+            if (audioManager.audioClips.Length > 0)
+            {
+                audioManager.SeleccionDeAudio(0, 1f, true);
+                //Debug.Log("Ejecuto Sonido");
+            }
+
+        }
+
+    }
 }

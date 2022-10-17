@@ -6,7 +6,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public AudioClip[] audioClips;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     private void Awake()
     {
