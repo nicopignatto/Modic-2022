@@ -22,8 +22,14 @@ public class Playermove : MonoBehaviour
    
     static public bool Muerto
     {
-        get{return muerto;}
-        set{muerto = value;}
+        get
+        {
+            return muerto;
+        }
+        set
+        {
+            muerto = value;
+        }
     }
 
     void Start()
